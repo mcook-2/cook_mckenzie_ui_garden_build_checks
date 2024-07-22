@@ -1,0 +1,11 @@
+"use strict";(self.webpackChunkcomponent_library=self.webpackChunkcomponent_library||[]).push([[721],{"./src/components/Button/Button.stories.tsx":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.r(__webpack_exports__),__webpack_require__.d(__webpack_exports__,{Disabled:()=>Disabled,Primary:()=>Primary,__namedExportsOrder:()=>__namedExportsOrder,default:()=>Button_stories});var react=__webpack_require__("./node_modules/react/index.js");const StyledButton=(0,__webpack_require__("./node_modules/styled-components/dist/styled-components.browser.esm.js").Ay)((({label,disabled,onClick,backgroundColor,...rest})=>react.createElement("button",{disabled,onClick,...rest},label)))`
+  background: ${props=>props.disabled?"grey":props.backgroundColor||"blue"};
+  cursor: ${props=>props.disabled?"not-allowed":"pointer"};
+  opacity: ${props=>props.disabled?.5:1};
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+`,Button=({label,disabled,onClick,backgroundColor})=>react.createElement(StyledButton,{label,disabled,onClick,backgroundColor}),Button_Button=Button;Button.__docgenInfo={description:"",methods:[],displayName:"Button",props:{label:{required:!0,tsType:{name:"string"},description:""},disabled:{required:!1,tsType:{name:"boolean"},description:""},onClick:{required:!1,tsType:{name:"signature",type:"function",raw:"() => void",signature:{arguments:[],return:{name:"void"}}},description:""},backgroundColor:{required:!1,tsType:{name:"string"},description:""}}};const Button_stories={title:"Components/Button",component:Button_Button,argTypes:{onClick:{action:"clicked"},label:{control:"text"},disabled:{control:"boolean"}}},Primary={args:{label:"Button",disabled:!1}},Disabled={args:{label:"Button",disabled:!0}},__namedExportsOrder=["Primary","Disabled"];Primary.parameters={...Primary.parameters,docs:{...Primary.parameters?.docs,source:{originalSource:"{\n  args: {\n    label: 'Button',\n    disabled: false\n  }\n}",...Primary.parameters?.docs?.source}}},Disabled.parameters={...Disabled.parameters,docs:{...Disabled.parameters?.docs,source:{originalSource:"{\n  args: {\n    label: 'Button',\n    disabled: true\n  }\n}",...Disabled.parameters?.docs?.source}}}}}]);
+//# sourceMappingURL=components-Button-Button-stories.69b18338.iframe.bundle.js.map
