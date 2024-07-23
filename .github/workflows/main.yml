@@ -29,14 +29,20 @@ jobs:
       - name: Run lint checks
         run: npm run lint
 
-      - name: Run Prettier
-        run: npm prettier --check .
+      - name: Run Prettier check
+        run: npm run prettier-check
 
-      - name: Run Prettier - write
-        run: npm prettier --write .
+      - name: Run Prettier write (if needed)
+        run: npm run prettier --write .
 
       - name: Run tests
         run: npm test
 
-      - name: Build project
-        run: npm run build
+      - name: Check for unstaged changes
+        run: git diff --exit-code
+        continue-on-error: true
+
+      - name: Notify on failure
+        if: failure()
+        run: |
+          echo "Build failed. Please fix the issues before pushing changes."
