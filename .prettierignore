@@ -1,0 +1,11 @@
+.config/
+.husky/
+.storybook/
+.vscode/
+node_modules/
+storybook-static/
+*.config.js
+*.config.ts
+*.config.mjs
+*.config.json
+*.json

@@ -21,7 +21,7 @@ describe('Table Component', () => {
   });
   test('background color changes when disabled', () => {
     render(
-      <Table disabled ={true} >
+      <Table disabled={true}>
         <tbody>
           <tr>
             <td>Row 1, Cell 1</td>
@@ -36,4 +36,3 @@ describe('Table Component', () => {
     expect(tableElement).toHaveStyle('background-color: grey');
   });
 });
-

@@ -13,7 +13,7 @@ describe('RadioButton Component', () => {
       />
     );
 
-    const RadioButtonElement = screen.getByText("label test");
+    const RadioButtonElement = screen.getByText('label test');
 
     expect(RadioButtonElement).toBeVisible();
   });
@@ -29,7 +29,7 @@ describe('RadioButton Component', () => {
       />
     );
 
-    const labelElement = screen.getByText("label test");
+    const labelElement = screen.getByText('label test');
     expect(labelElement).toHaveStyle('color: grey');
   });
 });

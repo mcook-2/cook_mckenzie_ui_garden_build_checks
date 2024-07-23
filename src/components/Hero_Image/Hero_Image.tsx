@@ -22,15 +22,16 @@ const HeroContainer = styled.div<HeroContainerProps>`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(${props => props.imageurl});
+  background-image: url(${(props) => props.imageurl});
   background-size: cover;
   background-position: center;
   width: 100%;
   height: 400px;
-  color: ${props => (props.disabled ? 'light-grey' : props.textColor || 'white')};
+  color: ${(props) =>
+    props.disabled ? 'light-grey' : props.textColor || 'white'};
   text-align: center;
-  opacity: ${props => (props.disabled ? 0.5 : 1)};
-  cursor: ${props => (props.disabled ? 'not-allowed' : 'default')};
+  opacity: ${(props) => (props.disabled ? 0.5 : 1)};
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'default')};
 `;
 
 const Title = styled.h1`
@@ -42,9 +43,21 @@ const Subtitle = styled.h2`
   font-size: 24px;
 `;
 
-function HeroImage({ title, subtitle, imageurl, disabled , textColor , testId}: HeroImageProps) {
+function HeroImage({
+  title,
+  subtitle,
+  imageurl,
+  disabled,
+  textColor,
+  testId,
+}: HeroImageProps) {
   return (
-    <HeroContainer data-testid={testId} imageurl={imageurl} disabled={disabled} textColor={textColor}>
+    <HeroContainer
+      data-testid={testId}
+      imageurl={imageurl}
+      disabled={disabled}
+      textColor={textColor}
+    >
       <Title>{title}</Title>
       <Subtitle>{subtitle}</Subtitle>
     </HeroContainer>

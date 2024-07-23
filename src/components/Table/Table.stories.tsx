@@ -1,5 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Table, { TableProps, TableHeader, TableRow, TableCell, TableFooter } from './Table';
+import Table, {
+  TableProps,
+  TableHeader,
+  TableRow,
+  TableCell,
+  TableFooter,
+} from './Table';
 import React from 'react';
 
 const metaTable: Meta<typeof Table> = {
@@ -50,7 +56,7 @@ export const Default: TableStory = {
 
 export const Disabled: TableStory = {
   args: {
-    disabled: true
+    disabled: true,
   },
   render: (args) => (
     <Table {...args}>

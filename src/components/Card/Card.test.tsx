@@ -23,7 +23,7 @@ describe('Card component', () => {
         title="Test Card"
         description="Test Description"
         imageurl="https://example.com/image.jpg"
-        disabled = {true}
+        disabled={true}
         testId="test-card"
       />
     );

@@ -9,7 +9,7 @@ describe('HeroImage Component', () => {
         title="Test Title"
         subtitle="Test Subtitle"
         imageurl="https://via.placeholder.com/1200x400"
-        testId='test-hero-img'
+        testId="test-hero-img"
       />
     );
 
@@ -29,7 +29,7 @@ describe('HeroImage Component', () => {
         subtitle="Test Subtitle"
         imageurl="https://via.placeholder.com/1200x400"
         disabled={true}
-        testId='test-hero-img'
+        testId="test-hero-img"
       />
     );
 
@@ -37,5 +37,4 @@ describe('HeroImage Component', () => {
     expect(heroContainer).toHaveStyle('color: light-grey');
     expect(heroContainer).toHaveStyle('opacity: 0.5');
   });
-
 });

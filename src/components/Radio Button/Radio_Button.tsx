@@ -19,13 +19,20 @@ const Input = styled.input`
   margin-right: 8px;
 `;
 
-const Label = styled.label<{ disabled?: boolean, fontSize?: string }>`
-  font-size: ${props => props.fontSize || '14px'};
-  color: ${props => (props.disabled ? 'grey' : 'black')};
-  cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
+const Label = styled.label<{ disabled?: boolean; fontSize?: string }>`
+  font-size: ${(props) => props.fontSize || '14px'};
+  color: ${(props) => (props.disabled ? 'grey' : 'black')};
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
 `;
 
-const RadioButton = ({ id, label, checked, onChange, disabled, fontSize  }: RadioButtonProps) => {
+const RadioButton = ({
+  id,
+  label,
+  checked,
+  onChange,
+  disabled,
+  fontSize,
+}: RadioButtonProps) => {
   const handleChange = () => {
     onChange(id);
   };

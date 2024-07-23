@@ -11,15 +11,19 @@ export interface CardProps {
   testId?: string;
 }
 
-const CardContainer = styled.div<{ disabled?: boolean , backgroundColor?: string;}>`
-  background: ${props => (props.disabled ? 'grey' : props.backgroundColor || 'white')};
+const CardContainer = styled.div<{
+  disabled?: boolean;
+  backgroundColor?: string;
+}>`
+  background: ${(props) =>
+    props.disabled ? 'grey' : props.backgroundColor || 'white'};
   width: 300px;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  opacity: ${props => (props.disabled ? 0.4 : 1)};
-  cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
+  opacity: ${(props) => (props.disabled ? 0.4 : 1)};
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
 `;
 
 const CardImage = styled.img`
@@ -37,9 +41,20 @@ const CardDescription = styled.p`
   font-size: 14px;
 `;
 
-const Card = ({ title, description, imageurl, disabled, backgroundColor, testId }: CardProps) => {
+const Card = ({
+  title,
+  description,
+  imageurl,
+  disabled,
+  backgroundColor,
+  testId,
+}: CardProps) => {
   return (
-    <CardContainer data-testid={testId} disabled={disabled} backgroundColor={backgroundColor}>
+    <CardContainer
+      data-testid={testId}
+      disabled={disabled}
+      backgroundColor={backgroundColor}
+    >
       <CardImage src={imageurl} alt={title} />
       <CardTitle>{title}</CardTitle>
       <CardDescription>{description}</CardDescription>

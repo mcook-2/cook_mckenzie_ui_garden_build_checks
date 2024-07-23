@@ -10,7 +10,7 @@ describe('Img Component', () => {
         alt="Placeholder Image"
         width="300px"
         height="300px"
-        testId='test-img'
+        testId="test-img"
       />
     );
 
@@ -27,7 +27,7 @@ describe('Img Component', () => {
         width="300px"
         height="300px"
         disabled={true}
-        testId='test-img'
+        testId="test-img"
       />
     );
 
