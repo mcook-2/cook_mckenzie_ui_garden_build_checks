@@ -18,7 +18,7 @@ COPY . .
 RUN npm run build-storybook
 
 # Expose port (if needed for Storybook or other services)
-EXPOSE 8083
+EXPOSE 8018
 
 # Default command (if any, for running Storybook or another service)
-CMD ["npx", "http-server", "./storybook-static", "-p", "8083"]
+CMD ["npx", "http-server", "./storybook-static", "-p", "8018"]

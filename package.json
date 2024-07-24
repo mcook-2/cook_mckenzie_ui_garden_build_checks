@@ -4,13 +4,14 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "storybook": "storybook dev -p 8083",
+    "storybook": "storybook dev -p 8018",
     "build-storybook": "storybook build",
     "build": "webpack --mode production",
     "lint": "eslint .",
     "prettier-check": "prettier --check .",
     "prettier-write": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "build-check": "eslint . && prettier --check . && jest test"
   },
   "husky": {
     "hooks": {
