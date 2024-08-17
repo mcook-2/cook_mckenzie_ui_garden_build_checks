@@ -1,13 +1,8 @@
 import React from 'react';
+import Home from './pages/Home';
 
 const App = () => {
-  const unusedVariable = 'I am not used. Delete me in the return to test lint';
-  const test = 'testing ci 3';
-  return (
-    <div className="App">
-      Hello World {unusedVariable} {test}{' '}
-    </div>
-  );
+  return <Home />;
 };
 
 export default App;
